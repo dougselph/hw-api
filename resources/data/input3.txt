@@ -1,0 +1,7 @@
+LastName FirstName Gender FavoriteColor DateOfBirth
+Staubach Roger M Blue 02/05/1942
+Morton Craig M Blue 02/05/1943
+White Danny M Blue 02/09/1952
+Aikman Troy M Blue 11/21/1966
+Romo Tony M Blue 04/21/1980
+Prescott Dak M Blue 07/29/1993

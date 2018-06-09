@@ -1,0 +1,5 @@
+LastName | FirstName | Gender | FavoriteColor | DateOfBirth
+McCartney | Paul | M | Red | 06/18/1942
+Lennon | John | M | Purple | 10/09/1940
+Starr | Ringo | M | Black | 07/07/1940
+Harrison | George | M | Blue | 02/25/1943

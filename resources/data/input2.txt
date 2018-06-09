@@ -1,0 +1,10 @@
+LastName, FirstName, Gender, FavoriteColor, DateOfBirth
+McVie, Christine, F, Brown, 07/12/1943
+Wilson, Nancy, F, Red, 03/16/1954
+Nicks, Stevie, F, White, 05/26/1948
+Ross, Diana, F, Pink, 03/26/1944
+Wilson, Ann, F, Red, 06/19/1950
+Benatar, Pat, F, Green, 01/10/1953
+Jett, Joan, F, Black, 09/22/1958
+Harry, Debbie, F, Orange, 07/01/1945
+Raitt, Bonnie, F, Blues, 11/08/1949
