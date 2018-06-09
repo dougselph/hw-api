@@ -30,4 +30,19 @@
             :favorite-color "Blues" :date-of-birth "02/15/1984"}
            (parsed-map "Clark Gary M Blues 02/15/1984\n")))))
 
+(deftest test-list-data-files
+  (testing "fn list-data-files returns list of objects"
+    (let [fseq (list-data-files "./resources/data/")]
+      (is (not (realized? fseq)))
+      (is (every? #(= (class %) java.io.File) fseq)))))
+
+(deftest test-load-files
+  (testing "fn load-files returns vector of maps"
+    (let [out-seq (load-files "./resources/data/")]
+      (is (vector? out-seq))
+      (is (every? map? out-seq))
+      (is (every? (fn [x] (= (into [] (keys x))
+                            [:last-name :first-name :sex
+                             :favorite-color :date-of-birth]))
+                  out-seq)))))
 

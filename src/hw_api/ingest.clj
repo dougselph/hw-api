@@ -1,6 +1,7 @@
 (ns hw-api.ingest
   (:require [clojure.string :as s]
-            [clojure.data.csv :as csv]))
+            [clojure.data.csv :as csv]
+            [clojure.java.io :as io]))
 
 (defn delimiter-select
   "Identifies and returns the delimiter in use in the line passed as line-string."
@@ -28,3 +29,20 @@
   (->> line-string
        parse-line
        (zipmap [:last-name :first-name :sex :favorite-color :date-of-birth])))
+
+(defn list-data-files
+  "Returns lazy seq of files contained in the directory at in-path."
+  [in-path]
+  (->> in-path
+       io/file
+       file-seq
+       (filter #(.isFile %))))
+
+(defn load-files
+  "Returns vactor of maps populated by parsing files contained in directory at in-path."
+  [in-path]
+  (->> in-path
+       list-data-files
+       (map #(-> % io/reader line-seq rest))
+       flatten
+       (mapv parsed-map)))
