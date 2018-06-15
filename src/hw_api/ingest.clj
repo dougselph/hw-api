@@ -42,10 +42,14 @@
 (defn parsed-map
   "Accepts a string containing a line of delimited data, and zips into a map"
   [line-string]
-  (->> line-string
-       parse-line
-       (zipmap map-keywords)
-       (sortable-dob)))
+  (try
+    (->> line-string
+         parse-line
+         (zipmap map-keywords)
+         (sortable-dob))
+    (catch Exception e
+      (str "Exception: " (.getMessage e))
+      nil)))
 
 (defn list-data-files
   "Returns lazy seq of files contained in the directory at in-path."
