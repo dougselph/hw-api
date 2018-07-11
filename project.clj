@@ -11,10 +11,3 @@
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]]}})
 
-;;:plugins [[lein-ring "0.9.7"]]
-;;:ring {:handler hw-api.api/app}
-
-;;[ring/ring-core "1.6.3"]
-;;[ring/ring-jetty-adapter "1.6.3"]
-;;[ring/ring-defaults "0.2.1"]
-
